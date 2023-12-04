@@ -56,18 +56,7 @@ var vm = function () {
             self.pagesize(data.PageSize)
             self.totalPages(data.TotalPages);
             self.totalRecords(data.TotalRecords);
-            self.Id(data.Id);
-            self.Name(data.Name);
-            self.Birthdate(data.Birthdate);
-            self.CountryId(data.CountryId);
-            self.CountryName(data.CountryName);
-            self.DraftYear(data.DraftYear);
-            self.PositionId(data.PositionId);
-            self.PositionName(data.PositionName);
-            self.Height(data.Height);
-            self.Weight(data.Weight);
-            self.School(data.School);
-            self.Photo(data.Photo);
+            
             //self.SetFavourites();
         });
     };
