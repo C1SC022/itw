@@ -1,4 +1,4 @@
-﻿// ViewModel KnockOut
+// ViewModel KnockOut
 var vm = function () {
     console.log('ViewModel initiated...');
     //---Variáveis locais
@@ -24,16 +24,16 @@ var vm = function () {
 
     //--- Page Events
     self.activate = function (id) {
-        console.log('CALL: getPlayers...');
+        console.log('CALL: getTeams...');
         var composedUri = self.baseUri() + id;
         ajaxHelper(composedUri, 'GET').done(function (data) {
             console.log(data);
             hideLoading();
             self.Id(data.Id);
+            self.Name(data.Name);
             self.Acronym(data.Acronym);
             self.ConferenceId(data.ConferenceId);
             self.ConferenceName(data.ConferenceName);
-            self.Name(data.Name);
             self.City(data.City);
             self.Conference(data.Conference);
             self.DivisionId(data.DivisionId)
