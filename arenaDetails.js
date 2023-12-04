@@ -1,4 +1,4 @@
-﻿// ViewModel KnockOut
+// ViewModel KnockOut
 var vm = function () {
     console.log('ViewModel initiated...');
     //---Variáveis locais
@@ -101,6 +101,10 @@ $(document).ready(function () {
     console.log("document.ready!");
     ko.applyBindings(new vm());
 });
+
+$(document).ajaxComplete(function (event, xhr, options) {
+    $("#myModal").modal('hide');
+})
 
 $(document).ajaxComplete(function (event, xhr, options) {
     $("#myModal").modal('hide');
